@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SquizzConnector.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="filePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P:\AWPDC\Contacts\scheduled_contacts</Value>
+    </Setting>
+    <Setting Name="defaultDatabaseSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ALECTRO-SBS01\SBSMONITORING</Value>
+    </Setting>
+    <Setting Name="defaultDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SquizzConnector</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
