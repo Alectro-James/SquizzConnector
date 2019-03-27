@@ -12,6 +12,7 @@ namespace SquizzConnector
         public string lastName;
         public string cardRecordID;
         public string cardName;
+        public string cardEmail;
        
        public CardDetails()
         {
@@ -19,14 +20,16 @@ namespace SquizzConnector
             lastName = "";
             cardRecordID = "";
             cardName = "";
+            cardEmail = "";
         }
 
-        public CardDetails(string pfirstName, string plastName, string pcardRecordID,string pcardName)
+        public CardDetails(string pfirstName, string plastName, string pcardRecordID,string pcardName,string pcardEmail)
         {
             firstName = pfirstName;
             lastName = plastName;
             cardRecordID = pcardRecordID;
             cardName = pcardName;
+            cardEmail = pcardEmail;
         }
 
 

@@ -144,6 +144,7 @@ namespace SquizzConnector
             cardItemDataTable.Columns.Add("firstName");//1
             cardItemDataTable.Columns.Add("lastName");//2
             cardItemDataTable.Columns.Add("cardName");//3
+             cardItemDataTable.Columns.Add("cardEmail");//4
 
 
 
@@ -172,20 +173,22 @@ namespace SquizzConnector
                     return;
                 }
 
-                writer.WriteLine("cardRecordID,firstName,lastName,cardName");
+                writer.WriteLine("cardRecordID,firstName,lastName,cardName,cardEmail");
 
                 for (int i = j * rowsPerFile; i < cardItems.Count && i < (j * rowsPerFile) + rowsPerFile; i++)
                 {
                     cardItemDataTable.Rows.Add(cardItems[i].cardRecordID,
                                cardItems[i].firstName,
                                cardItems[i].lastName,
-                               cardItems[i].cardName
+                               cardItems[i].cardName,
+                               cardItems[i].cardEmail
                               );
 
                     writer.WriteLine("\"" + cardItems[i].cardRecordID + "\",\""
                         + cardItems[i].firstName + "\",\""
                         + cardItems[i].lastName + "\",\""
                         + cardItems[i].cardName + "\",\""
+                         + cardItems[i].cardEmail + "\",\""
                         + "\"");
                 }
 

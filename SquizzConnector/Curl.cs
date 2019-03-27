@@ -188,7 +188,7 @@ namespace SquizzConnector
             {
                 var json = "[" + content + "]"; // change this to array
                 var objects = JArray.Parse(json); // parse as array  
-                //Console.Write(content);
+                Console.Write(content);
                // string[] stringSeparators = new string[] { "\r\n" };
               //  string[] lines;
                // List<string> wordsToRemove = "Name: Number: Email1: Email2:".Split(' ').ToList();
@@ -196,6 +196,7 @@ namespace SquizzConnector
                 string lastName = "";
                 string cardRecordID = "";
                 string cardName = "";
+                string cardEmail="";
               
 
                 foreach (JObject o in objects.Children<JObject>())
@@ -216,17 +217,18 @@ namespace SquizzConnector
 
                                 foreach (JObject o1 in objects1.Children<JObject>())
                                 {
-
-                                   cardRecordID = o1["taxcode"].ToString();
+                                    Console.WriteLine(firstName);
+                                   cardRecordID = o1["taxcodePercentageRate"].ToString();
                                     lastName = o1["keyTaxcodeID"].ToString();
                                     firstName = o1["description"].ToString();
+                                    cardEmail = o1["taxcode"].ToString();
 
                                     if (firstName != "")
                                         cardName = firstName + " " + lastName;
                                     else
                                         cardName = lastName;
 
-                                    listCardDetails.Add(new CardDetails(firstName, lastName, cardRecordID,cardName));
+                                    listCardDetails.Add(new CardDetails(firstName, lastName, cardRecordID,cardName,cardEmail));
 
                                 }
 
