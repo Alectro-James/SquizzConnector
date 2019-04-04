@@ -28,10 +28,10 @@ namespace SquizzConnector
             Curl c = new Curl();
 
 
-          c.getLineItems();
-         c.getNames();
-           c.joinTables();
-         Application.Exit();
+        //  c.getLineItems();
+        //  c.getNames();
+         //  c.joinTables();
+       //  Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
