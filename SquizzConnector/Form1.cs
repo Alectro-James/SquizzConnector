@@ -27,11 +27,10 @@ namespace SquizzConnector
         {
             Curl c = new Curl();
 
-
-        //  c.getLineItems();
-        //  c.getNames();
-         //  c.joinTables();
-       //  Application.Exit();
+            c.getNames();
+            c.getLineItems();
+            c.joinTables();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,8 +54,8 @@ namespace SquizzConnector
             Curl c = new Curl();
             Cursor.Current = Cursors.WaitCursor;
 
-            c.getLineItems();
             c.getNames();
+            c.getLineItems();
             c.joinTables();
 
             Cursor.Current = Cursors.Default;

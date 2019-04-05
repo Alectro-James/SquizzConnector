@@ -17,10 +17,10 @@ namespace SquizzConnector
 
             ServicePointManager.ServerCertificateValidationCallback = (obj, X509certificate, chain, errors) => true;
             String finalUrl = string.Format("{0}{1}", "https://mail.alectro.com.au:1155/squizzconnector/data/customer_account_enquiry_line_report?keyCustomerAccountID=&recordType=INVOICE&reportID=invoice_lines&orderByField=keyInvoiceLineID&orderByDirection=desc&pageNumber=1&numberOfRecords=100000");
-            Console.WriteLine(finalUrl);
+         //   Console.WriteLine(finalUrl);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(finalUrl);
             // request = WebRequest.Create(finalUrl);
-            Console.WriteLine("here");
+          //  Console.WriteLine("here");
 
             request.Method = "GET";
             request.ContentType = "application/json";
@@ -35,7 +35,7 @@ namespace SquizzConnector
 
 
             WebResponse response = request.GetResponse();
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+           // Console.WriteLine(((HttpWebResponse)response).StatusDescription);
             //var response = request.GetResponse();
             //Now, we read the response (the string), and output it.
 
@@ -57,7 +57,7 @@ namespace SquizzConnector
             string responseFromServer = reader.ReadToEnd();
 
 
-            Console.WriteLine(responseFromServer);
+           // Console.WriteLine(responseFromServer);
 
             //JObject o = JObject.Parse(responseFromServer);
 

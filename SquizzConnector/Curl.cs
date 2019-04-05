@@ -217,7 +217,7 @@ namespace SquizzConnector
 
                                 foreach (JObject o1 in objects1.Children<JObject>())
                                 {
-                                    Console.WriteLine(firstName);
+                                  
                                    cardRecordID = o1["taxcodePercentageRate"].ToString();
                                     lastName = o1["keyTaxcodeID"].ToString();
                                     firstName = o1["description"].ToString();
